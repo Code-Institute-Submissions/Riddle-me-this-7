@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Welcome {{ username }}, it is time to play</h1>
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <h3>{{ riddles[riddle_index]["riddle"] }} </h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        {% with messages = get_flashed_messages() %} 
+        {% if messages %}
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %} 
+        {% endwith %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <form method="POST">
+            <div class="control-group">
+
+                <input type="text" class="form-control" placeholder="answer" name="message" id="message" autofocus>
+                <input type="hidden" name="riddle_index" id="riddle_index" value={{riddle_index}}>
+                        
+            </div>
+
+            <br>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" id="logInButton">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
