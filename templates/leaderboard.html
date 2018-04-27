@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block content %}
-<h2>LeaderBoard</h2>
+<h2>Leaderboard </h2>
 <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
         <div class="list_games table-responsive">
@@ -11,11 +11,13 @@
                         <th scope="col">Score</td>
                     </tr>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</td>
-                        <td>dude</td>
-                        <td>7</td>
+                    {% for user in leaderboard %}
+                    <tr>          
+                        <td scope="row">{{loop.index}}</td>
+                        <td scope="row">{{user.name}}</td>
+                        <td scope="row">{{user.score}}</td>                    
                     </tr>
+                    {% endfor %}
                 </tbody>
                 </thead>
             </table>
