@@ -1,6 +1,12 @@
 {% extends 'base.html' %} {% block content %}
-<h2>Game over</h2>
-<h3>Thanks for playing {{ username }}. Play again or invite a friend to play</h3>
-<h4>Your score is : {{ score }} / 10</h4>
-<a href="{{ url_for('index') }}"><h2 class="sub">I want to play again!</h2></a>
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto game-over">
+        <h2>Game over</h2>
+        <h3>Thanks for playing {{ username }}. Play again or invite a friend to play</h3>
+        <h4>Your score is : {{ score }} / 10</h4>
+        <a href="{{ url_for('index') }}">
+            <h2 class="sub">I want to play again!</h2>
+        </a>
+    </div>
+</div>
 {% endblock %}          

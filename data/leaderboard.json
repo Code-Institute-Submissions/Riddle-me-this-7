@@ -1,14 +1,14 @@
 [
     {
-        "name": "Test User",
+        "name": "Test User", 
         "score": 7
-    },
+    }, 
     {
-        "name": "dude",
+        "name": "dude", 
         "score": 10
-    },
+    }, 
     {
-        "name": "RiddleMan",
+        "name": "RiddleMan", 
         "score": 9
     }
 ]

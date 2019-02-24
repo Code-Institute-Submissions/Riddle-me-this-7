@@ -1,17 +1,16 @@
 {% extends 'base.html' %} {% block content %}
-<h2>Log in to play the game</h2>
 <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
+        <h2 class="identity-title">Choose your identity</h2>
         <form method="POST">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
-                    <label>Enter your username and start playing ...</label>
-                    <input type="text" class="form-control" placeholder="Username" name="username" id="name" required data-validation-required-message="Please enter your name.">
+                    <input type="text" class="form-control username-input" placeholder="Enter your username and start playing ..." name="username" id="name" required data-validation-required-message="Please enter your name.">
                 </div>
             </div>
             <br>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary" id="logInButton">Log In</button>
+                <button type="submit" class="btn btn-primary" id="logInButton">Start</button>
                     <!-- Button trigger modal -->
                  <button type="button" class="btn btn-primary instruction-btn" data-toggle="modal" data-target="#instructions">Instructions</button>
             </div>
@@ -29,7 +28,7 @@
           </div>
           <div class="modal-body">
             <ul>
-                <li>Enter a username and log in</li>
+                <li>Enter a username</li>
                 <li>You will have 10 riddles to guess</li>
                 <li>You will have 2 attempts to find the right answer for each riddle</li>
                 <li>After you finished the game you can visit the leaderboard page to see your rank </li>
