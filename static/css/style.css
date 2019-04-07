@@ -16,12 +16,12 @@ body{
 	letter-spacing: 1px;
 	padding-top: 10px;
 	font-weight: 600;
-	background-color: rgba(36, 38, 39, 0.5);
+	background-color: rgba(36, 38, 39, 0.7);
 	text-align: center;
 }
 .made {
 	display: inline-block;
-}
+} 
 body{
 	background: url(/static/img/rddle_background.jpg) no-repeat;
     background-size: cover;
@@ -35,15 +35,11 @@ body{
   background: no-repeat center center;
   background-attachment: scroll;
   position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover; 
   height: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 .game-title {
 	border-radius: 6px;
@@ -63,7 +59,9 @@ body{
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: cover;
-  -webkit-background-clip:text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+	background-clip: text;
   animation: animate 15s linear infinite;
   text-align: center;
   text-transform: uppercase;
@@ -131,6 +129,7 @@ label {
   padding: 10px;
   font-weight: 600;
   font-size: 24px;
+  border-radius: 5px;
 }
 .flash-message {
 	color: red;
@@ -144,11 +143,22 @@ label {
   color: #ced4da;
   text-shadow: 2px 1px 15px #000;
 }
+#submitButton{
+  float: right
+}
 
 /*------------------------------gameover page*/
 .game-over{
   background-color: #C3EB78;
   text-align: center;
+  padding: 10px;
+}
+.score-text{
+  font-size: 25px;
+  font-weight: bold;
+}
+.play-again{
+  font-size: 20px;
 }
 /*------------------------------leaderboard page main content*/
 .leaderboard{
@@ -169,7 +179,8 @@ label {
 /*---------------------------------------------------media queries*/
 @media only screen and (max-width: 768px){
 	h1,
-	h2 {
+	h2,
+	.username-input{
 		font-size: 25px;
 	}
 }
@@ -178,12 +189,18 @@ label {
   .game-title{
   font-size: 16px
 }
-  	h1,
+  h1,
 	h2 {
 		font-size: 18px;
 	}
+	h3{
+	  font-size: 14px;
+	}
 	.username-input{
-	  font-size: 16;
+	  font-size: 16px;
+	}
+	.riddle{
+	  font-size: 16px;
 	}
 }
 /*-----------------------------------------animation for jumbotron*/
