@@ -45,8 +45,8 @@ body{
 	border-radius: 6px;
 	font-weight: 700;
 	font-size: 24px;
-	background-color: #0000003b;
-	box-shadow: 3px 3px 4px #000000ad;
+	/*background-color: #0000003b;*/
+	/*box-shadow: 3px 3px 4px #000000ad;*/
 	text-align: center;
 	color: white;
 	padding: 20px;
@@ -92,7 +92,7 @@ label {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
 }
-.instruction-btn {
+.start-btn {
 	float: right;
 }
 .modal-header {
